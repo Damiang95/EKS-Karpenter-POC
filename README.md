@@ -39,16 +39,16 @@ This repository provisions an Amazon EKS (Elastic Kubernetes Service) cluster us
 ## 🛠️ Deployment Steps
 
 Initialize Terraform
-    terraform init
+- terraform init
 
 Preview Plan
-    terraform plan
+- terraform plan
 
 Apply Infrastructure
-    terraform apply
+- terraform apply
 
 Verify Karpenter Installation
-    kubectl get pods -n kube-system -l app.kubernetes.io/name=karpenter
+- kubectl get pods -n kube-system -l app.kubernetes.io/name=karpenter
 
 ---
 
@@ -56,15 +56,15 @@ Verify Karpenter Installation
 
 
 x86 Workload: Schedules on amd64 nodes
-    kubectl get pods -l app=x86
+- kubectl get pods -l app=x86
 
 
 ARM Deployment: Will trigger an ARM64 (Graviton) node
-    kubectl get pods -l app=arm
+- kubectl get pods -l app=arm
 
 ---
 ## 🧹 Cleanup
 
 To destroy all resources and clean up:
 
-terraform destroy
+- terraform destroy
