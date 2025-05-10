@@ -18,13 +18,13 @@ This repository provisions an Amazon EKS (Elastic Kubernetes Service) cluster us
 
 ## 📁 Project Structure
 
-# 📁 terraform/
-# ├── main.tf              # Main Terraform infrastructure setup
-# ├── terraform.tfvars     # Dynamic configuration values
-# ├── variables.tf         # Input variable definitions
-# ├── outputs.tf           # Output values
-# ├── versions.tf          # Provider version constraints
-# ├── README.md            # Documentation for using this setup
+- 📁 terraform/
+- ├── main.tf              # Main Terraform infrastructure setup
+- ├── terraform.tfvars     # Dynamic configuration values
+- ├── variables.tf         # Input variable definitions
+- ├── outputs.tf           # Output values
+- ├── versions.tf          # Provider version constraints
+- ├── README.md            # Documentation for using this setup
 ---
 
 ## 🚀 Prerequisites
