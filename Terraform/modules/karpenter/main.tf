@@ -11,12 +11,8 @@ terraform {
   }
 }
 
-# data "aws_ecrpublic_authorization_token" "token" {
-#   provider = aws.virginia
-# }
-
 data "aws_ecrpublic_authorization_token" "token" {
-  # uses the default AWS provider
+
 }
 module "karpenter" {
   source = "terraform-aws-modules/eks/aws//modules/karpenter"
@@ -38,7 +34,6 @@ resource "helm_release" "karpenter" {
   repository_username = data.aws_ecrpublic_authorization_token.token.user_name
   repository_password = data.aws_ecrpublic_authorization_token.token.password
   chart               = "karpenter"
-  # version             = "1"
   wait                = true
 
   values = [<<-EOT
