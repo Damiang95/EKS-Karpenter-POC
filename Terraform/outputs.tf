@@ -10,6 +10,7 @@ output "eks_cluster_certificate_authority_data" {
   value = module.eks.cluster_certificate_authority_data
 }
 
-output "karpenter_iam_role_arn" {
-  value = module.karpenter.iam_role_arn
+output "node_iam_role_name" {
+  description = "IAM Role name for Karpenter nodes"
+  value       = module.karpenter.node_iam_role_name
 }
